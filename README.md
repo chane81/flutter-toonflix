@@ -36,3 +36,21 @@ $ dart fix --dry-run
 # or
 $ dart fix --apply
 ```
+
+## issue
+
+- Image.network 로 이미지 호출시 아래 cors 이슈 발생
+  <img src='./readme/web-cors.png' width='500'>
+  - flutter 구동방식을 vscode launch.json 설정을 통한 구동으로 변경
+  - launch.json > web 에 web 구동시 `disable-web-security` 설정을 추가하여 해결
+  - launch.json > web
+    ```json
+    ...
+    {
+      "name": "Web",
+      "request": "launch",
+      "type": "dart",
+      "args": ["-d", "chrome", "--web-browser-flag", "--disable-web-security"]
+    }
+    ...
+    ```
