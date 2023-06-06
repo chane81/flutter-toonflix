@@ -40,6 +40,12 @@
       "args": ["-d", "chrome", "--web-browser-flag", "--disable-web-security"]
     },
     {
+      "name": "Android Device",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "android"
+    },
+    {
       "name": "iPhone Device",
       "request": "launch",
       "type": "dart",
