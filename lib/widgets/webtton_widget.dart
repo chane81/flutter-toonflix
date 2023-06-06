@@ -19,20 +19,23 @@ class Webtoon extends StatelessWidget {
       },
       child: Column(
         children: [
-          Container(
-            width: 250,
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      offset: const Offset(5, 10),
-                      color: Colors.black.withOpacity(0.5))
-                ]),
-            child: Image.network(webtoonModel.thumb, headers: const {
-              'Referer': 'https://comic.naver.com',
-            }),
+          Hero(
+            tag: webtoonModel.id,
+            child: Container(
+              width: 250,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 10,
+                        offset: const Offset(5, 10),
+                        color: Colors.black.withOpacity(0.5))
+                  ]),
+              child: Image.network(webtoonModel.thumb, headers: const {
+                'Referer': 'https://comic.naver.com',
+              }),
+            ),
           ),
           const SizedBox(
             height: 10,
