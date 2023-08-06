@@ -25,6 +25,9 @@ $ fvm flutter pub get
 ```bash
 # http 패칭
 $ fvm flutter pub add http
+
+# shared preference
+$ fvm flutter pub add shared_preferences
 ```
 
 ## code check
